@@ -8,8 +8,12 @@
 
 操作：点击A或双击A
 
+链接：[点这里](http://chunnallu.github.io/share/projects/js/js%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6%E8%A7%A3%E8%80%A6%E6%A8%A1%E5%9D%97%E4%BE%8B%E5%AD%90/eventTest_example1/index.html)
+
 # 例子2
 
 实现：要开发一个游戏，启动游戏，加载图片和音乐，加载完后，渲染场景和音效
 
 操作：打开开发者窗口，电器启动按钮
+
+链接：[点这里](http://chunnallu.github.io/share/projects/js/js%E9%80%9A%E8%BF%87%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6%E8%A7%A3%E8%80%A6%E6%A8%A1%E5%9D%97%E4%BE%8B%E5%AD%90/eventTest_example2/index.html)
