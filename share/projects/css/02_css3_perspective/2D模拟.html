@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>A</title>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <style>
+        .container{
+            width: 1024px;
+            height: 568px;
+            position:absolute;
+            background: #dddddd;
+        }
+        .box{
+            width: 100px;
+            height: 150px;
+            position:absolute;
+            background:#b4b472;
+            transform: skew(0deg,15deg) ;
+        }
+        .box1{
+            left:200px;
+            top:200px;
+        }
+        .box2{
+            left:600px;
+            top:200px;
+        }
+        .driffraction{
+            width: 10px;
+            height: 144px;
+            margin: 0 auto;
+            border:solid 3px #008800;
+        }
+        .light{
+            width: 2px;
+            height: 194px;
+            left:20px;
+            position:relative;
+            border:solid 1px #008800;
+        }
+        /** $(".box").addClass("animate1") **/
+        .status1{
+            transform:rotate3d(0,0,1,90deg) skew(0deg,15deg);
+        }
+        .animate1{
+            transform:rotate3d(0,0,1,90deg) skew(-15deg,0deg);
+            transition:transform 2s;
+        }
+        .animate2{
+            transform:rotate3d(0,0,1,180deg) skew(0deg,15deg);
+            transition:transform 2s;
+        }
+        input{
+            position:absolute;
+            top:580px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">
+           <div class="driffraction"></div>
+        </div>
+        <div class="box box2">
+            <div class="driffraction"></div>
+        </div>
+    </div>
+    <input value="旋转" type="button"/>
+    <script>
+        var btn = $("input");
+        var box = $(".box");
+        btn.on("click",function(){
+            var hasAnimate1 = box.hasClass("animate1");
+            var hasAnimate2 = box.hasClass("animate2");
+            if(hasAnimate1){
+                box.addClass("animate2");
+                btn.attr("disabled","disabled");
+                setTimeout(function(){
+                    box.removeClass("animate1").removeClass("animate2");
+                    btn.removeAttr("disabled");
+                },2000)
+            }else{
+                box.addClass("animate1");
+                btn.attr("disabled","disabled");
+                setTimeout(function(){
+                    btn.removeAttr("disabled");
+                },2000)
+            }
+        })
+    </script>
+</body>
+</html>
